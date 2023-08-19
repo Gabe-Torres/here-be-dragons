@@ -34,6 +34,7 @@ class Nytimes
   
       result = @hash[:results].select { |story| story[:subsection] == "Politics" }
 
+      
       expect(result).to be_an_instance_of(Array)
       expect(result.count).to eq(6)
       expect(result.first[:title]).to eq("Congressional G.O.P. Agenda Quietly Falls Into Place Even as Trump Steals the Spotlight")
